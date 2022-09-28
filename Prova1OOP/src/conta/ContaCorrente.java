@@ -19,12 +19,12 @@ public class ContaCorrente extends Conta{
 
 	@Override
 	public void setCredito(double credito) {
-		super.setCredito(credito+taxa);
+		super.setCredito(super.getSaldo()+(credito-taxa));
 	}
 
 	@Override
 	public void setDebito(double debito) {
-		super.setDebito(debito+taxa);
+		super.setDebito(super.getSaldo()+(debito-taxa));
 	}
 	
 	
