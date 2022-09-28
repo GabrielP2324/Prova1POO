@@ -11,8 +11,7 @@ public class Conta {
 		
 	}
 	private double saldo;
-	private double credito;
-	private double debito;
+
 	
 	public double getSaldo() {
 		return saldo;
@@ -20,27 +19,20 @@ public class Conta {
 	private void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
-	public double getCrédito() {
-		return credito;
-	}
+
 	
 	public void setCredito(double credito) {
 		if(credito>0) {
-			this.credito = credito;
 			setSaldo(saldo+credito);
 		}else {
 			System.out.println("valor inválido");
 		}
 		
 	}
-	public double getDebito() {
-		return debito;
-	}
 	
 	public void setDebito(double debito) {
 		if(debito<saldo) {
-			this.debito = debito;
-			setSaldo(saldo-credito);
+			setSaldo(saldo-debito);
 		}else {
 			System.out.println("valor inválido");
 		}
